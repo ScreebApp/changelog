@@ -1,15 +1,15 @@
-import React from "react";
-import { useRouter } from "next/router";
-import useTimelineStore from "lib/state/use-timeline-store";
-import { IAggregatedChangelogs, IImagePreviewMeta } from "lib/models/view";
-import { getArticleSlugs } from "lib/get-articles-slugs";
-import { generateRssFeed } from "lib/generate-rss-feed";
-import { generateLatestChangelogsJson } from "lib/generate-latest-json";
-import Years from "components/layout/years";
-import Weeks from "components/layout/weeks";
-import Months from "components/layout/months";
-import { MainLayout } from "components/layout/main-layout";
 import { TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
+import { MainLayout } from "components/layout/main-layout";
+import Months from "components/layout/months";
+import Weeks from "components/layout/weeks";
+import Years from "components/layout/years";
+import { generateLatestChangelogsJson } from "lib/generate-latest-json";
+import { generateRssFeed } from "lib/generate-rss-feed";
+import { getArticleSlugs } from "lib/get-articles-slugs";
+import { IAggregatedChangelogs, IImagePreviewMeta } from "lib/models/view";
+import useTimelineStore from "lib/state/use-timeline-store";
+import { useRouter } from "next/router";
+import React from "react";
 
 const ITEMS_PER_PAGE = 4;
 
