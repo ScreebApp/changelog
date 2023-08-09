@@ -1,12 +1,12 @@
-import React from "react";
-import Head from "next/head";
-import { defaultPx } from "lib/utils/default-container-px";
-import Navbar from "components/core/navbar";
-import { Footer } from "components/core/footer";
 import { Box, Container, Heading, Text, VStack } from "@chakra-ui/react";
-import TimeSelectionTabs from "../core/time-selection-tabs";
+import { Footer } from "components/core/footer";
+import Navbar from "components/core/navbar";
 import { motion } from "framer-motion";
+import { defaultPx } from "lib/utils/default-container-px";
+import Head from "next/head";
 import { useRouter } from "next/router";
+import React from "react";
+import TimeSelectionTabs from "../core/time-selection-tabs";
 
 export interface ILayoutProps {
   children: React.ReactNode;

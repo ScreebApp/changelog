@@ -1,8 +1,7 @@
-import React from "react";
-import { defaultPx } from "lib/utils/default-container-px";
 import { Box, Container, ContainerProps, HStack, Text } from "@chakra-ui/react";
-import { FooterLink } from "./footer-link";
+import { defaultPx } from "lib/utils/default-container-px";
 import { NextResponsiveImage } from "../next-responsive-image";
+import { FooterLink } from "./footer-link";
 
 const LINK_GAPS = [2, 2, 8];
 
