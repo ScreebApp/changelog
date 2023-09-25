@@ -1,7 +1,7 @@
 import { Box, Button, Container, Heading, HStack, Text, VStack } from "@chakra-ui/react";
 import { Footer } from "components/core/footer";
 import Navbar from "components/core/navbar";
-import { motion, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import useAnimatePageStore from "lib/state/use-animate-page-store";
 import usePageStatusStore from "lib/state/use-page-status-store";
 import useTimelineStore from "lib/state/use-timeline-store";
@@ -75,6 +75,7 @@ export const MainLayout = ({
     });
   }, []);
 
+  let newPage = page === 0 ? 1 : page;
   const hasMorePage =
     !infiniteScrollingView &&
     page !== undefined &&
