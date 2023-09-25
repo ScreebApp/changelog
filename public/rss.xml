@@ -97,5 +97,12 @@
             <pubDate>Mon, 23 Jan 2023 16:30:00 GMT</pubDate>
             <enclosure url="http://localhost:3004/imgs/response-expiration.png" length="0" type="image/png"/>
         </item>
+        <item>
+            <title><![CDATA[🕒 Introducing Response Expiration: Take Control of Your Survey Responses!]]></title>
+            <link>http://localhost:3000/changelogs/2023-01-23-response-expiration</link>
+            <guid>http://localhost:3000/changelogs/2023-01-23-response-expiration</guid>
+            <pubDate>Mon, 23 Jan 2023 16:30:00 GMT</pubDate>
+            <enclosure url="http://localhost:3000/imgs/response-expiration.png" length="0" type="image/png"/>
+        </item>
     </channel>
 </rss>
