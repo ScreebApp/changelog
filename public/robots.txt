@@ -3,7 +3,10 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://changelog.june.so
+Host: https://changelog.screeb.app
 
 # Sitemaps
-Sitemap: https://changelog.june.so/sitemap.xml
+Sitemap: https://changelog.screeb.app/sitemap.xml
+
+User-agent: *
+Disallow: /years

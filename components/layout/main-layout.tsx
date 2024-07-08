@@ -1,17 +1,16 @@
-import React, { ReactNode } from "react";
-import Link from "next/link";
-import Head from "next/head";
-import { defaultPx } from "lib/utils/default-container-px";
-import TryBanner from "components/core/try-banner";
-import Navbar from "components/core/navbar";
-import { Footer } from "components/core/footer";
 import { Box, Button, Container, Heading, HStack, Text, VStack } from "@chakra-ui/react";
-import TimeSelectionTabs from "../core/time-selection-tabs";
-import useTimelineStore from "lib/state/use-timeline-store";
+import { Footer } from "components/core/footer";
+import Navbar from "components/core/navbar";
 import { motion } from "framer-motion";
 import useAnimatePageStore from "lib/state/use-animate-page-store";
-import { useRouter } from "next/router";
 import usePageStatusStore from "lib/state/use-page-status-store";
+import useTimelineStore from "lib/state/use-timeline-store";
+import { defaultPx } from "lib/utils/default-container-px";
+import Head from "next/head";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React, { ReactNode } from "react";
+import TimeSelectionTabs from "../core/time-selection-tabs";
 
 export interface MainLayoutProps {
   page?: number;
@@ -34,7 +33,7 @@ export const MainLayout = ({
 }: MainLayoutProps) => {
   const metaTitle = `${
     infiniteScrollingView ? "" : page > 0 ? `Page ${page} -` : ""
-  } June Changelog`;
+  } Screeb Changelog`;
   const timeline = useTimelineStore();
   const { animatePage, setAnimatePage } = useAnimatePageStore();
   const router = useRouter();
@@ -76,6 +75,7 @@ export const MainLayout = ({
     });
   }, []);
 
+  let newPage = page === 0 ? 1 : page;
   const hasMorePage =
     !infiniteScrollingView &&
     page !== undefined &&
@@ -90,29 +90,29 @@ export const MainLayout = ({
           <title>{metaTitle}</title>
           <link rel="icon" href="/favicon.ico" />
           <meta name="title" content={metaTitle} />
-          <meta name="description" content="Discover new updates and improvements to June." />
-          <meta name="image" content="https://changelog.june.so/social.png" />
+          <meta name="description" content="Discover new updates and improvements to Screeb." />
+          <meta name="image" content="https://changelog.screeb.app/social.png" />
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://changelog.june.so" />
+          <meta property="og:url" content="https://changelog.screeb.app" />
           <meta property="og:title" content={metaTitle} />
           <meta
             property="og:description"
-            content="Discover new updates and improvements to June."
+            content="Discover new updates and improvements to Screeb."
           />
-          <meta property="og:image" content="https://changelog.june.so/social.png" />
+          <meta property="og:image" content="https://changelog.screeb.app/social.png" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:url" content="https://changelog.june.so" />
+          <meta name="twitter:url" content="https://changelog.screeb.app" />
           <meta name="twitter:title" content={metaTitle} />
           <meta
             name="twitter:description"
-            content="Discover new updates and improvements to June."
+            content="Discover new updates and improvements to Screeb."
           />
-          <meta name="twitter:image" content="https://changelog.june.so/social.png" />
+          <meta name="twitter:image" content="https://changelog.screeb.app/social.png" />
           <link
             rel="alternate"
             type="application/rss+xml"
-            title="June Changelog"
-            href="https://changelog.june.so/rss.xml"
+            title="Screeb Changelog"
+            href="https://changelog.screeb.app/rss.xml"
           />
         </Head>
       )}
@@ -170,7 +170,7 @@ export const MainLayout = ({
                   {!isInBlogPage && (
                     <VStack alignItems="start" width="100%">
                       <Text fontSize="xl" color="gray.700" textAlign={"start"}>
-                        The latest from June
+                        The latest from Screeb
                       </Text>
                       <Heading as="h1" fontSize={["5xl"]} color="black" textAlign={"start"}>
                         Changelog
@@ -218,16 +218,15 @@ export const MainLayout = ({
               </motion.div>
             </VStack>
           </Container>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { duration: 1, delay: 0.4 } },
+            }}
+          >
+            <Footer _wrapper={{ mt: [50, 50, 120], mb: 20 }} />
+          </motion.div>
         </Box>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: animatePage ? 0 : 1 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.4 }}
-      >
-        <TryBanner _wrapper={{ my: [50, 50, 120] }} />
-
-        <Footer _wrapper={{ mt: [50, 50, 120], mb: 20 }} />
       </motion.div>
     </>
   );

@@ -1,0 +1,29 @@
+name: Mirroring
+
+on:
+  push:
+    branches:
+      - master
+
+concurrency:
+  group: ${{ github.workflow }}-mirror-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  to_gitlab:
+    name: Mirror to GitLab
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Prepare SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.GITLAB_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
+
+      - name: Mirror to GitLab
+        run: |
+          git remote add gitlab git@gitlab.com:screeb-otis/screeb-changelog.git
+          git push  --force gitlab "refs/remotes/origin/*:refs/heads/*"
