@@ -14,6 +14,13 @@
         </image>
         <copyright>All rights reserved 2024, Screeb</copyright>
         <item>
+            <title><![CDATA[🏡 Dashboard Homepage]]></title>
+            <link>http://localhost:3004/changelogs/2024-07-15-dashboard-homepage</link>
+            <guid>http://localhost:3004/changelogs/2024-07-15-dashboard-homepage</guid>
+            <pubDate>Mon, 15 Jul 2024 12:30:00 GMT</pubDate>
+            <enclosure url="http://localhost:3004/imgs/dashboard-homepage.png" length="0" type="image/png"/>
+        </item>
+        <item>
             <title><![CDATA[💊 Ignore Anonymous Users]]></title>
             <link>http://localhost:3004/changelogs/2024-05-07-ignore-anonymous-users</link>
             <guid>http://localhost:3004/changelogs/2024-05-07-ignore-anonymous-users</guid>
