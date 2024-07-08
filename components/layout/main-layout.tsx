@@ -99,7 +99,6 @@ export const MainLayout = ({
             property="og:description"
             content="Discover new updates and improvements to Screeb."
           />
-          <meta name="robots" content="noindex,nofollow" />
           <meta property="og:image" content="https://changelog.screeb.app/social.png" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:url" content="https://changelog.screeb.app" />
@@ -228,15 +227,6 @@ export const MainLayout = ({
             <Footer _wrapper={{ mt: [50, 50, 120], mb: 20 }} />
           </motion.div>
         </Box>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: animatePage ? 0 : 1 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.4 }}
-      >
-        <TryBanner _wrapper={{ my: [50, 50, 120] }} />
-
-        <Footer _wrapper={{ mt: [50, 50, 120], mb: 20 }} />
       </motion.div>
     </>
   );
