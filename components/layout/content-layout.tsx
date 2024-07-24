@@ -1,10 +1,10 @@
-import React, { ReactNode } from "react";
-import Link from "next/link";
-import Head from "next/head";
 import { Button, HStack, VStack } from "@chakra-ui/react";
-import useTimelineStore from "lib/state/use-timeline-store";
 import { motion } from "framer-motion";
 import useAnimatePageStore from "lib/state/use-animate-page-store";
+import useTimelineStore from "lib/state/use-timeline-store";
+import Head from "next/head";
+import Link from "next/link";
+import React, { ReactNode } from "react";
 
 export interface ContentLayoutProps {
   page?: number;

@@ -5,7 +5,6 @@ import { getArticleSlugs } from "lib/get-articles-slugs";
 import dynamic from "next/dynamic";
 import { IPageProps } from "pages";
 import React from "react";
-import InfiniteScroll from "react-infinite-scroll-component";
 
 const Page = ({ slugs }: IPageProps) => {
   const Articles = React.useMemo(() => {
@@ -52,31 +51,10 @@ const Page = ({ slugs }: IPageProps) => {
           index={index}
           hideLayout={true}
           hideHead={true}
-          hideAuthorsNames={true}
+          hideAuthors={true}
           isInfiniteScrollingView={true}
         />
       ))}
-      <InfiniteScroll
-        style={{ overflow: "visible" }}
-        dataLength={renderedWeeks}
-        next={handleLoadMore}
-        hasMore={hasMoreWeeks()}
-        loader={<h4>Loading...</h4>}
-        scrollThreshold={0.7}
-      >
-        {ArticlesToRenderOnLoadMore.map((Article, index) => (
-          // @ts-ignore
-          <Article
-            key={slugs[index]}
-            // @ts-ignore
-            index={index + WEEKS_PER_RENDER}
-            hideLayout={true}
-            hideHead={true}
-            hideAuthorsNames={true}
-            isInfiniteScrollingView={true}
-          />
-        ))}
-      </InfiniteScroll>
     </MainLayout>
   );
 };

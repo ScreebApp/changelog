@@ -1,12 +1,12 @@
-import Link from "next/link";
-import NextImage from "next/image";
-import dynamic from "next/dynamic";
-import { defaultPx } from "lib/utils/default-container-px";
-import { Box, Button, Container, Flex, HStack, Text, useDisclosure } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { NavbarMobileMenuProps } from "./navbar-mobile-menu";
-import { DesktopNavItem } from "./desktop-nav-item";
+import { Box, Button, Container, Flex, HStack, Text, useDisclosure } from "@chakra-ui/react";
+import { defaultPx } from "lib/utils/default-container-px";
+import dynamic from "next/dynamic";
+import NextImage from "next/image";
+import Link from "next/link";
 import { NextResponsiveImage } from "../next-responsive-image";
+import { DesktopNavItem } from "./desktop-nav-item";
+import { NavbarMobileMenuProps } from "./navbar-mobile-menu";
 
 const DynamicNavbarMobileMenu = dynamic<NavbarMobileMenuProps>(
   () => import("./navbar-mobile-menu").then((mod) => mod.NavbarMobileMenu),

@@ -1,13 +1,3 @@
-import React from "react";
-import { useRouter } from "next/router";
-import Link from "next/link";
-import Head from "next/head";
-import { MdxMeta } from "lib/models/mdx-meta";
-import { motion } from "framer-motion";
-import dayjs from "dayjs";
-import { Contributor } from "components/contributor";
-import { ReactNode } from "@mdx-js/react/lib";
-import { MDXProvider } from "@mdx-js/react";
 import {
   Box,
   Divider,
@@ -16,14 +6,24 @@ import {
   Image,
   ListItem,
   OrderedList,
+  Stack,
   Text,
   UnorderedList,
   VStack,
-  Stack,
 } from "@chakra-ui/react";
-import Timeline from "./layout/timeline";
-import { MainLayout } from "./layout/main-layout";
+import { MDXProvider } from "@mdx-js/react";
+import { ReactNode } from "@mdx-js/react/lib";
+import { Contributor } from "components/contributor";
+import dayjs from "dayjs";
+import { motion } from "framer-motion";
+import { MdxMeta } from "lib/models/mdx-meta";
 import usePreviousPageUrl from "lib/state/use-previous-page-url-store";
+import Head from "next/head";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React from "react";
+import { MainLayout } from "./layout/main-layout";
+import Timeline from "./layout/timeline";
 
 import type { MDXComponents } from "mdx/types";
 const components: MDXComponents = {

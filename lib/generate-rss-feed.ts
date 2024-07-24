@@ -1,6 +1,6 @@
-import path from "path";
-import fs from "fs";
 import { Feed } from "feed";
+import fs from "fs";
+import path from "path";
 
 const MDX_DIR = "changelogs";
 
@@ -31,7 +31,7 @@ export const generateRssFeed = async () => {
 
   const changelogFileObjects = fs.readdirSync(path.join(process.cwd(), "pages", MDX_DIR), {
     withFileTypes: true,
-  });
+  });  
 
   const changelogFiles = await Promise.allSettled(
     changelogFileObjects.map((file) => import(`../pages/changelogs/${file.name}`))
