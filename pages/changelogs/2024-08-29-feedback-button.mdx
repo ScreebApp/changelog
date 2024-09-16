@@ -1,0 +1,29 @@
+import { MdxLayout } from "components/mdx-layout.tsx";
+
+export const meta = {
+  slug: "2024-08-29-feedback-button",
+  publishedAt: "2024-08-29T12:30:00.000Z",
+  title: "👋 Feedback Button",
+  headerImage: `${process.env.NEXT_PUBLIC_APP_HOST}/imgs/feedback-button-survey.png`,
+  authors: [
+    {
+      name: "Clément Chaban",
+      description: "Fullstack developer",
+      avatarUrl: `${process.env.NEXT_PUBLIC_APP_HOST}/authors/clement-chaban.png`,
+    },
+  ],
+};
+
+Welcome to the new update of our Feedback Button!
+
+In this version, we have introduced exciting new features that allow users to create and send surveys in a more engaging format.
+
+One of the key highlights of this update is the enhanced customization options for your Feedback Button. Users can personalize the button design to better match their brand’s look and feel, with options to choose from a range of color schemes or upload custom images to make it more interactive.
+
+Stay tuned for more updates and enhancements coming soon. Enjoy this new Format!
+
+export default ({ children, ...rest }) => (
+  <MdxLayout meta={meta} {...rest}>
+   {children}
+  </MdxLayout>
+);
