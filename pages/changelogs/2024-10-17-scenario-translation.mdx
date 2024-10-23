@@ -1,0 +1,34 @@
+import { MdxLayout } from "components/mdx-layout.tsx";
+
+export const meta = {
+  slug: "2024-10-17-scenario-translation",
+  publishedAt: "2024-10-17T15:30:00.000Z",
+  title: "🌍 Scenario Translation",
+  headerImage: `${process.env.NEXT_PUBLIC_APP_HOST}/imgs/response-translation.png`,
+  authors: [
+    {
+      name: "Romain Jolidon",
+      description: "Fullstack Developer",
+      avatarUrl: `${process.env.NEXT_PUBLIC_APP_HOST}/authors/romain-jolidon.png`,
+    },
+  ],
+};
+
+With the new **Scenario Translation** feature, users can effortlessly translate their surveys from the default language to any language available in their workspace with just a single click.
+
+This enhancement streamlines the process of creating multilingual surveys, ensuring that your audience can engage with your content in their preferred language, thereby improving accessibility and user experience.
+
+---
+
+To translate a survey, follow these steps:
+- Click on the button **Translate** in the survey editor.
+- A panel should open. From here, select the target language you want.
+- When you are done, click on the **Translate** button at then very bottom of the panel.
+- Wait for the translation to be done. It should only take some seconds.
+- Read the translated result and arrange the wording like you want.
+
+export default ({ children, ...rest }) => (
+  <MdxLayout meta={meta} {...rest}>
+   {children}
+  </MdxLayout>
+);

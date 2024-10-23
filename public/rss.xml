@@ -4,7 +4,7 @@
         <title>Screeb Changelog</title>
         <link>http://localhost:3004</link>
         <description>How Screeb gets better every week</description>
-        <lastBuildDate>Mon, 08 Jul 2024 15:23:04 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 23 Oct 2024 13:02:29 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Screeb changelog</generator>
         <image>
@@ -13,6 +13,20 @@
             <link>http://localhost:3004</link>
         </image>
         <copyright>All rights reserved 2024, Screeb</copyright>
+        <item>
+            <title><![CDATA[🌍 Scenario Translation]]></title>
+            <link>http://localhost:3004/changelogs/2024-10-17-scenario-translation</link>
+            <guid>http://localhost:3004/changelogs/2024-10-17-scenario-translation</guid>
+            <pubDate>Thu, 17 Oct 2024 15:30:00 GMT</pubDate>
+            <enclosure url="http://localhost:3004/imgs/response-translation.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[👋 Feedback Button]]></title>
+            <link>http://localhost:3004/changelogs/2024-08-29-feedback-button</link>
+            <guid>http://localhost:3004/changelogs/2024-08-29-feedback-button</guid>
+            <pubDate>Thu, 29 Aug 2024 12:30:00 GMT</pubDate>
+            <enclosure url="http://localhost:3004/imgs/feedback-button-survey.png" length="0" type="image/png"/>
+        </item>
         <item>
             <title><![CDATA[🏡 Dashboard Homepage]]></title>
             <link>http://localhost:3004/changelogs/2024-07-15-dashboard-homepage</link>
