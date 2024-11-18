@@ -1,0 +1,33 @@
+import { MdxLayout } from "components/mdx-layout.tsx";
+
+export const meta = {
+  slug: "2024-11-18-weekly-briefing",
+  publishedAt: "2024-11-18T10:30:00.000Z",
+  title: "📆 Weekly Briefing",
+  headerImage: `${process.env.NEXT_PUBLIC_APP_HOST}/imgs/weekly-briefing.png`,
+  authors: [
+    {
+      name: "Romain Jolidon",
+      description: "Fullstack Developer",
+      avatarUrl: `${process.env.NEXT_PUBLIC_APP_HOST}/authors/romain-jolidon.png`,
+    },
+  ],
+};
+
+We are exited to annouce our new feature **Weekly Briefing**. This feature will allow you to receive a weekly summary of your workspace activity directly in your inbox.
+You can also add external recipients to the briefing.
+
+Each Weekly Briefing is highly customized to your role in the company. Metrics like
+Funnels, Surveys, Messages, Sessions, and more are included in the report.
+
+Finally, a list of Next actions is provided to help you improve your workspace performance.
+
+This will help you to keep track of your workspace performance and make data-driven decisions for your specific role in your company.
+
+You can setup your Weekly Briefing [Here](https://admin.screeb.app/org/last/weekly-briefs).
+
+export default ({ children, ...rest }) => (
+  <MdxLayout meta={meta} {...rest}>
+   {children}
+  </MdxLayout>
+);
