@@ -4,7 +4,7 @@
         <title>Screeb Changelog</title>
         <link>http://localhost:3004</link>
         <description>How Screeb gets better every week</description>
-        <lastBuildDate>Mon, 18 Nov 2024 10:31:31 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 22 Nov 2024 10:29:46 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Screeb changelog</generator>
         <image>
@@ -18,7 +18,7 @@
             <link>http://localhost:3004/changelogs/2024-11-18-weekly-briefing</link>
             <guid>http://localhost:3004/changelogs/2024-11-18-weekly-briefing</guid>
             <pubDate>Mon, 18 Nov 2024 10:30:00 GMT</pubDate>
-            <enclosure url="http://localhost:3004/imgs/response-translation.png" length="0" type="image/png"/>
+            <enclosure url="http://localhost:3004/imgs/weekly-briefing.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[🌍 Scenario Translation]]></title>
