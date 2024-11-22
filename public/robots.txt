@@ -10,6 +10,4 @@ Sitemap: https://changelog.screeb.app/sitemap.xml
 
 User-agent: *
 Disallow: /years
-
-User-agent: *
 Disallow: /rss.xml
